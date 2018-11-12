@@ -23,7 +23,7 @@ export default class Temperature extends Component {
     async increase(){
         if (this.state.currentTemp >= 19 && this.state.currentTemp <= 33){
         await this.setState((prevState, props) => ({
-            dAngle: prevState.dAngle+15.25,
+            dAngle: prevState.dAngle+15.225,
             currentTemp: prevState.currentTemp+1
         }))
         this.updateArc();
@@ -34,7 +34,7 @@ export default class Temperature extends Component {
     async reduce(){
      if (this.state.currentTemp <= 34 && this.state.currentTemp > 19){
       await this.setState((prevState, props) => ({
-        dAngle: prevState.dAngle-15.25,
+        dAngle: prevState.dAngle-15.225,
         currentTemp: prevState.currentTemp-1
     }))
     this.updateArc();

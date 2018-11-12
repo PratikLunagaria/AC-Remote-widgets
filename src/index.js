@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './sass/Temperature.scss';
+// import './sass/Temperature.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

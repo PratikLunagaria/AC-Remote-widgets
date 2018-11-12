@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Svgknob from './addknob';
-// import {svgKnob} from 'svg-knob';
 import Tempsvg from './Tempsvg';
 
 export default class Temperature extends Component {

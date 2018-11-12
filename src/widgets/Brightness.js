@@ -10,7 +10,7 @@ export default class Brightness extends Component {
   render() {
     return (
         <div id="brightness-container">
-        <span className="faicons"><i class="fas fa-moon"></i></span>
+        <span className="faicons"><i className="fas fa-moon"></i></span>
       <div id="brightness">
       <Slider
       min={0}
@@ -20,7 +20,7 @@ export default class Brightness extends Component {
         this.setState({ value })
       }} />
       </div>
-      <span className="faicons"><i class="fas fa-sun"></i></span>
+      <span className="faicons"><i className="fas fa-sun"></i></span>
       </div>
     )
   }

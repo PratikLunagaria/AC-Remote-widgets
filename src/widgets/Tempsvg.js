@@ -5,7 +5,7 @@ export default class Tempsvg extends Component {
     return (
       <div>
       <svg id='level'>
-        <path d={this.props.pathd} fill='none' strokeWidth='4' stroke='#26BEF0' stroke-linecap="round"></path>
+        <path d={this.props.pathd} fill='none' strokeWidth='4' stroke='#26BEF0' strokeLinecap="round"></path>
     </svg>
         
       </div>

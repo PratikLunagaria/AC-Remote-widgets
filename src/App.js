@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import ColorWidget from './widgets/ColorWidget';
 import Brightness from './widgets/Brightness';
 import Temperature from './widgets/Temperature';
+import ColorWidget from './widgets/ColorWidget';
+
+
 
 class App extends Component {
   render() {

@@ -5,9 +5,7 @@ export default class Temperature extends Component {
         super(props);
         this.state={
             dAngle: 0,
-            prevTemp: 19,
             currentTemp: 20,
-            nextTemp:21
         }
         this.updateArc = this.updateArc.bind(this);
     }
@@ -37,9 +35,9 @@ export default class Temperature extends Component {
   
       <div id="knob">
         <div id="temp-col">
-            <div className="faded-temp">{this.state.prevTemp}°C</div>
+            <div className="faded-temp">{this.state.currentTemp-1}°C</div>
             <div className="active-temp">{this.state.currentTemp}°C</div>
-            <div className="faded-temp">{this.state.nextTemp}°C</div>
+            <div className="faded-temp">{this.state.currentTemp+1}°C</div>
         </div>
       </div>
       <svg id='level'>

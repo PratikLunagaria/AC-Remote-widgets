@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import Svgknob from './addknob';
 // import {svgKnob} from 'svg-knob';
 import Tempsvg from './Tempsvg';
 
@@ -6,7 +7,7 @@ export default class Temperature extends Component {
     constructor(props){
         super(props);
         this.state={
-            dAngle: 180,
+            dAngle: 10,
             currentTemp: 19,
             pathProps: 'M 15.39 150 A 98 98 0, 0, 1, 100 2'
         }
@@ -22,7 +23,7 @@ export default class Temperature extends Component {
     async increase(){
         if (this.state.currentTemp >= 19 && this.state.currentTemp <= 33){
         await this.setState((prevState, props) => ({
-            dAngle: prevState.dAngle+12,
+            dAngle: prevState.dAngle+15,
             currentTemp: prevState.currentTemp+1
         }))
         this.updateArc();
@@ -33,22 +34,26 @@ export default class Temperature extends Component {
     async reduce(){
      if (this.state.currentTemp <= 34 && this.state.currentTemp > 19){
       await this.setState((prevState, props) => ({
-        dAngle: prevState.dAngle-12,
+        dAngle: prevState.dAngle-15,
         currentTemp: prevState.currentTemp-1
     }))
     this.updateArc();
   }
   }
     updateArc(){
-        var rAngle = this.state.dAngle*(Math.PI / 180);
+        var rAngle = this.state.dAngle*(Math.PI / 120);
         var x = 88 - 88 * Math.cos(rAngle) ;
         var y = - 88 * Math.sin(rAngle);
         var big = (rAngle > Math.PI)? 1:0;
+          
         var d = 'M0,88 a88,88 0 ' + big + ',1 ' + x + ',' + y;
+        // var d = 'M0,90 a90,90 0 ' + big + ',1 ' + x + ',' + y;
         this.setState({
           pathProps: d
         }); 
-    };      
+    };         
+
+    
 
 
 
